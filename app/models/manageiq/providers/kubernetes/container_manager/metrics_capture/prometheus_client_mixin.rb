@@ -18,8 +18,8 @@ module ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::Promet
         :cert_store => options[:ssl_cert_store]
       },
       :request => {
-        :open_timeout => 2, # opening a connection
-        :timeout      => 5  # waiting for response
+        :open_timeout => 300, # opening a connection
+        :timeout      => 300  # waiting for response
       },
       :headers => {
         :Authorization => "Bearer " + credentials[:token]
